@@ -1,65 +1,123 @@
+/* style.css */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('background.jpg') no-repeat center center/cover;
-    color: white;
+    background: linear-gradient(to bottom, #5fb4a2, #a3d8b4);
     text-align: center;
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    padding: 15px 30px;
+    background: #2f8d81;
+    color: white;
 }
 
-.logo {
-    font-size: 24px;
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+ a {
+    text-decoration: none;
+    color: white;
     font-weight: bold;
 }
 
-ul3 {
-    list-style: none;
+h1 {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.templates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.template {
+    text-align: center;
+}
+
+.template-box {
+    width: 200px;
+    height: 180px;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, #5fb4a2, #3498db);
+    padding: 5px;
+    border-radius: 0 0 10px 10px;
+}
+
+button {
+    width: 40px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.view {
+    background: url('eye-icon.png') no-repeat center;
+    background-size: contain;
+}
+
+.download {
+    background: url('download-icon.png') no-repeat center;
+    background-size: contain;
+}
+
+footer {
+    background: #2f8d81;
+    padding: 10px;
+    margin-top: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.social-icons {
     display: flex;
     gap: 20px;
 }
 
-ul2 {
-    display: inline;
+.github, .discord, .instagram {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
- ul {
-    color: white;
-    text-decoration: none;
+.github {
+    background-image: url('github-icon.png');
 }
 
-.h {
-    margin-top: 100px;
+.discord {
+    background-image: url('discord-icon.png');
 }
 
-.h1 {
-    font-size: 36px;
-    font-weight: bold;
-}
-
-.subtext {
-    font-size: 24px;
-    color: #72a0c1;
-}
-
-.button {
-    padding: 10px 20px;
-    font-size: 18px;
-    color: white;
-    background: #0078ff;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-footer {
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    margin-top: 50px;
+.instagram {
+    background-image: url('instagram-icon.png');
 }
