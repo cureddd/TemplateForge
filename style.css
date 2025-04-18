@@ -31,6 +31,32 @@ body {
     z-index: 1000;
 }
 
+.search {
+    display: flex;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 3px 10px;
+    border-radius: 20px;
+    max-width: 400px;
+    width: 100%;
+    margin-right: -150px;
+    box-shadow: 0 0 8px 1px rgb(49, 49, 49);
+}
+
+.enter-img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.input-search {
+    color: rgb(150, 146, 146);
+    border: none;
+    outline: none;
+    font-size: 14px;
+    flex-grow: 1;
+    background: transparent;
+}
+
 .logo {
     color: white;
     font-size: 24px;
@@ -140,8 +166,8 @@ h1 {
 
 .templates-grid {
     display: grid;
-    padding-bottom: 40px;
-    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    padding-bottom:40px;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 370px));
     gap: 45px;
     max-width: 1700px;
     margin: 0 auto;
