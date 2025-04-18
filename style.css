@@ -62,7 +62,7 @@ body {
 .hero {
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
+    background: linear-gradient(to bottom, #5181aa, #3c5872);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -127,12 +127,14 @@ h1 {
 
 
 .templates-section {
-    background: #808080;
+    background: linear-gradient(to top, #5181aa, #3c5872);
     padding: 40px 20px;
     text-align: center;
 }
 
 .templates-section h2 {
+    padding-top:40px; 
+    padding-bottom:30px;
     font-size: 36px;
     font-weight: 700;
     color: white;
@@ -141,9 +143,10 @@ h1 {
 
 .templates-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
+    padding-bottom:40px;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    gap: 45px;
+    max-width: 1700px;
     margin: 0 auto;
 }
 
