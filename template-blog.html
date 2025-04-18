@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шаблон Блог</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #fff;
+            color: #333;
+        }
+        .header {
+            background: #1E3A8A;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .header h1 {
+            font-size: 36px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+        .posts {
+            flex: 3;
+        }
+        .post {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+        .post h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .post p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .sidebar {
+            flex: 1;
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .sidebar h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .sidebar ul {
+            list-style: none;
+        }
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        .sidebar ul li a {
+            color: #1E3A8A;
+            text-decoration: none;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #FFA500;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Мій Блог</h1>
+    </header>
+
+    <div class="container">
+        <section class="posts">
+            <article class="post">
+                <h2>Перша стаття</h2>
+                <p>Це приклад статті для вашого блогу. Розкажіть свою історію або поділіться корисними порадами!</p>
+            </article>
+            <article class="post">
+                <h2>Друга стаття</h2>
+                <p>Додайте більше контенту, щоб привернути увагу читачів.</p>
+            </article>
+        </section>
+
+        <aside class="sidebar">
+            <h3>Категорії</h3>
+            <ul>
+                <li><a href="#">Технології</a></li>
+                <li><a href="#">Подорожі</a></li>
+                <li><a href="#">Лайфстайл</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p>© 2025 Мій Блог</p>
+    </footer>
+</body>
+</html>
