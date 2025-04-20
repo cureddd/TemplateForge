@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шаблон Фотограф</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #fff;
+            color: #333;
+        }
+        .header {
+            background: #1E3A8A;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .header h1 {
+            font-size: 36px;
+        }
+        .gallery {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .gallery h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #FFA500;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Фотографія</h1>
+        <p>Зберігаю ваші найкращі моменти</p>
+    </header>
+
+    <section class="gallery">
+        <h2>Мої роботи</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200" alt="Фото 1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200" alt="Фото 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200" alt="Фото 3">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Зв'яжіться зі мною: <a href="mailto:photo@example.com" style="color: white;">photo@example.com</a></p>
+    </footer>
+</body>
+</html>
