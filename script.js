@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM fully loaded'); // Отладка: проверяем, что скрипт загружается
 
     const searchInput = document.querySelector('.input-search');
     const templateCards = document.querySelectorAll('.template-card');
@@ -10,32 +9,35 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
 
-    // Проверяем, найден ли элемент themeToggle
-    if (!themeToggle || !themeIcon) {
-        console.error('Theme toggle button or icon not found');
-        return;
-    }
-    console.log('Theme toggle button found'); // Отладка
+    
 
-    // Прокрутка к секции шаблонов
+
+    // AOS
+    AOS.init({
+        duration: 800, 
+        once: true, 
+        offset: 100 
+    });
+
+    
     toTemplatesBtn.addEventListener('click', function(e) {
         e.preventDefault();
         templatesSection.scrollIntoView({ behavior: 'smooth' });
     });
 
-    // Прокрутка к секции "Про нас"
+    
     document.querySelector('a[href="#about"]').addEventListener('click', function(e) {
         e.preventDefault();
         aboutSection.scrollIntoView({ behavior: 'smooth' });
     });
 
-    // Прокрутка к секции "Контакти" (футер)
+    
     document.querySelector('a[href="#contact"]').addEventListener('click', function(e) {
         e.preventDefault();
         contactSection.scrollIntoView({ behavior: 'smooth' });
     });
 
-    // Поиск шаблонов
+    
     searchInput.addEventListener('input', function(e) {
         const searchValue = e.target.value.toLowerCase();
 
@@ -49,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Функция для скачивания файла
+    
     function downloadFile(fileUrl, fileName) {
         fetch(fileUrl)
             .then(response => response.blob())
@@ -67,7 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(err => console.error('Ошибка при скачивании:', err));
     }
 
-    // Обработчики для кнопок "Скачать"
     document.getElementById('download-portfolio').addEventListener('click', function(e) {
         e.preventDefault();
         downloadFile('/images/templates/template-portfolio.html', 'template-portfolio.html');
@@ -108,9 +109,9 @@ document.addEventListener('DOMContentLoaded', function() {
         downloadFile('/images/templates/template-personal.html', 'template-personal.html');
     });
 
-    // Переключение темы
+   
     const savedTheme = localStorage.getItem('theme') || 'dark';
-    console.log('Saved theme:', savedTheme); // Отладка: проверяем, какая тема загружается
+    console.log('Saved theme:', savedTheme); 
     if (savedTheme === 'light') {
         document.body.classList.add('light-theme');
         themeIcon.classList.remove('fa-moon');
@@ -122,12 +123,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     themeToggle.addEventListener('click', function() {
-        console.log('Theme toggle clicked'); // Отладка: проверяем, срабатывает ли клик
+        console.log('Theme toggle clicked'); 
         const isLightTheme = document.body.classList.toggle('light-theme');
-        console.log('Is light theme:', isLightTheme); // Отладка: проверяем, изменилась ли тема
+        console.log('Is light theme:', isLightTheme); 
         themeIcon.classList.toggle('fa-sun', isLightTheme);
         themeIcon.classList.toggle('fa-moon', !isLightTheme);
         localStorage.setItem('theme', isLightTheme ? 'light' : 'dark');
-        console.log('Theme saved:', localStorage.getItem('theme')); // Отладка: проверяем сохранение
+        console.log('Theme saved:', localStorage.getItem('theme')); 
     });
 });

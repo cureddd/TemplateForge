@@ -266,6 +266,7 @@ body.light-theme .templates-section h2 {
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s, background 0.3s;
+    opacity: 0; /* Начальное состояние для AOS */
 }
 
 body.light-theme .template-card {
