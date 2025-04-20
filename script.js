@@ -1,23 +1,41 @@
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM fully loaded'); // Отладка: проверяем, что скрипт загружается
+
     const searchInput = document.querySelector('.input-search');
     const templateCards = document.querySelectorAll('.template-card');
     const toTemplatesBtn = document.getElementById('to-templates-btn');
     const templatesSection = document.getElementById('templates');
     const aboutSection = document.getElementById('about');
+    const contactSection = document.getElementById('contact');
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
 
-    
+    // Проверяем, найден ли элемент themeToggle
+    if (!themeToggle || !themeIcon) {
+        console.error('Theme toggle button or icon not found');
+        return;
+    }
+    console.log('Theme toggle button found'); // Отладка
+
+    // Прокрутка к секции шаблонов
     toTemplatesBtn.addEventListener('click', function(e) {
         e.preventDefault();
         templatesSection.scrollIntoView({ behavior: 'smooth' });
     });
 
-    
+    // Прокрутка к секции "Про нас"
     document.querySelector('a[href="#about"]').addEventListener('click', function(e) {
         e.preventDefault();
         aboutSection.scrollIntoView({ behavior: 'smooth' });
     });
 
-    // Поиск сломался и пришлось код поменять, богдан прости но я не все поменял только 25-26 строку потому-что я менял названия для прокруток и тд...//
+    // Прокрутка к секции "Контакти" (футер)
+    document.querySelector('a[href="#contact"]').addEventListener('click', function(e) {
+        e.preventDefault();
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Поиск шаблонов
     searchInput.addEventListener('input', function(e) {
         const searchValue = e.target.value.toLowerCase();
 
@@ -31,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    //это тоже функция скачивания, опираясь на нее я искал ошибки в этой функции и поэтому на всякий случай решил не убирать//
+    // Функция для скачивания файла
     function downloadFile(fileUrl, fileName) {
         fetch(fileUrl)
             .then(response => response.blob())
@@ -49,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(err => console.error('Ошибка при скачивании:', err));
     }
 
-   //P/S -> Сломались кнопки скачать и пришлось сделать обработчики для них(нашел в чате ГПТ)//
+    // Обработчики для кнопок "Скачать"
     document.getElementById('download-portfolio').addEventListener('click', function(e) {
         e.preventDefault();
         downloadFile('/images/templates/template-portfolio.html', 'template-portfolio.html');
@@ -88,5 +106,28 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('download-personal').addEventListener('click', function(e) {
         e.preventDefault();
         downloadFile('/images/templates/template-personal.html', 'template-personal.html');
+    });
+
+    // Переключение темы
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    console.log('Saved theme:', savedTheme); // Отладка: проверяем, какая тема загружается
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    } else {
+        document.body.classList.remove('light-theme');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+    }
+
+    themeToggle.addEventListener('click', function() {
+        console.log('Theme toggle clicked'); // Отладка: проверяем, срабатывает ли клик
+        const isLightTheme = document.body.classList.toggle('light-theme');
+        console.log('Is light theme:', isLightTheme); // Отладка: проверяем, изменилась ли тема
+        themeIcon.classList.toggle('fa-sun', isLightTheme);
+        themeIcon.classList.toggle('fa-moon', !isLightTheme);
+        localStorage.setItem('theme', isLightTheme ? 'light' : 'dark');
+        console.log('Theme saved:', localStorage.getItem('theme')); // Отладка: проверяем сохранение
     });
 });
