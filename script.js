@@ -5,19 +5,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const templatesSection = document.getElementById('templates');
     const aboutSection = document.getElementById('about');
 
-    // Прокрутка к секции шаблонов
+    
     toTemplatesBtn.addEventListener('click', function(e) {
         e.preventDefault();
         templatesSection.scrollIntoView({ behavior: 'smooth' });
     });
 
-    // Прокрутка к секции "Про нас"
+    
     document.querySelector('a[href="#about"]').addEventListener('click', function(e) {
         e.preventDefault();
         aboutSection.scrollIntoView({ behavior: 'smooth' });
     });
 
-    // Поиск шаблонов
+    // Поиск сломался и пришлось код поменять, богдан прости но я не все поменял только 25-26 строку потому-что я менял названия для прокруток и тд...//
     searchInput.addEventListener('input', function(e) {
         const searchValue = e.target.value.toLowerCase();
 
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Функция для скачивания файла
+    //это тоже функция скачивания, опираясь на нее я искал ошибки в этой функции и поэтому на всякий случай решил не убирать//
     function downloadFile(fileUrl, fileName) {
         fetch(fileUrl)
             .then(response => response.blob())
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(err => console.error('Ошибка при скачивании:', err));
     }
 
-    // Обработчики для кнопок "Скачать"
+   //P/S -> Сломались кнопки скачать и пришлось сделать обработчики для них(нашел в чате ГПТ)//
     document.getElementById('download-portfolio').addEventListener('click', function(e) {
         e.preventDefault();
         downloadFile('/images/templates/template-portfolio.html', 'template-portfolio.html');

@@ -212,7 +212,7 @@ h1 {
     background: #1E3A8A;
     border-radius: 0 0 10px 10px;
 }
-
+ 
 .preview-btn, .download-btn {
     display: inline-block;
     padding: 10px 20px;
@@ -231,7 +231,7 @@ h1 {
 .preview-btn:hover, .download-btn:hover {
     background: #3B82F6;
 }
-
+ эту секцию было очень сложно реалтзовать поэтому я сделал ее с помощью нейросети
 .about-section {
     background: linear-gradient(to bottom, #5181aa, #3c5872);
     padding: 40px 20px;
@@ -263,14 +263,40 @@ h1 {
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
     background: rgba(0, 0, 0, 0.8);
     color: white;
     margin-top: 40px;
 }
 
+footer h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: white;
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #FFA500;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
 .social-links {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .social-links a {
