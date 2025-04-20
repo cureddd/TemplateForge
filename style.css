@@ -212,7 +212,7 @@ h1 {
     background: #1E3A8A;
     border-radius: 0 0 10px 10px;
 }
- 
+
 .preview-btn, .download-btn {
     display: inline-block;
     padding: 10px 20px;
@@ -231,7 +231,7 @@ h1 {
 .preview-btn:hover, .download-btn:hover {
     background: #3B82F6;
 }
- эту секцию было очень сложно реалтзовать поэтому я сделал ее с помощью нейросети
+
 .about-section {
     background: linear-gradient(to bottom, #5181aa, #3c5872);
     padding: 40px 20px;
@@ -246,9 +246,10 @@ h1 {
 }
 
 .about-content {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     color: white;
+    padding: 0 20px;
 }
 
 .about-content p {
@@ -259,6 +260,17 @@ h1 {
 
 .about-content strong {
     color: #FFD700;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+    }
 }
 
 footer {
