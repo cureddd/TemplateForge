@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шаблон Новини</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #f4f4f4;
+            color: #333;
+        }
+        .header {
+            background: #1E3A8A;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .header h1 {
+            font-size: 36px;
+        }
+        .news {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+        .articles {
+            flex: 3;
+        }
+        .article {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .article h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .article p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .sidebar {
+            flex: 1;
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .sidebar h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .sidebar ul {
+            list-style: none;
+        }
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        .sidebar ul li a {
+            color: #1E3A8A;
+            text-decoration: none;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1E3A8A;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Новини</h1>
+    </header>
+
+    <section class="news">
+        <div class="articles">
+            <div class="article">
+                <h2>Новина 1</h2>
+                <p>Останні події у світі технологій.</p>
+            </div>
+            <div class="article">
+                <h2>Новина 2</h2>
+                <p>Нові відкриття у науці.</p>
+            </div>
+        </div>
+        <aside class="sidebar">
+            <h3>Категорії</h3>
+            <ul>
+                <li><a href="#">Технології</a></li>
+                <li><a href="#">Наука</a></li>
+                <li><a href="#">Політика</a></li>
+            </ul>
+        </aside>
+    </section>
+
+    <footer>
+        <p>© 2025 Новостной портал</p>
+    </footer>
+</body>
+</html>

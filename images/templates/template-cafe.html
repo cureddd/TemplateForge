@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шаблон Кафе</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #fff;
+            color: #333;
+        }
+        .header {
+            background: url('https://via.placeholder.com/1200x400') no-repeat center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            text-shadow: 0 0 5px rgba(0,0,0,0.5);
+        }
+        .header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .menu {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .menu h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .menu-item {
+            background: #f4f4f4;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        .menu-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .menu-item p {
+            font-size: 16px;
+        }
+        .reservation {
+            background: #1E3A8A;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .reservation h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .reservation form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .reservation input {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        .reservation button {
+            background: #FFA500;
+            color: black;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Кафе "Смак"</h1>
+        <p>Смачні страви та приємна атмосфера</p>
+    </header>
+
+    <section class="menu">
+        <h2>Наше меню</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Кава</h3>
+                <p>50 грн</p>
+            </div>
+            <div class="menu-item">
+                <h3>Піца</h3>
+                <p>150 грн</p>
+            </div>
+            <div class="menu-item">
+                <h3>Десерт</h3>
+                <p>80 грн</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="reservation">
+        <h2>Забронювати столик</h2>
+        <div>
+            <input type="text" placeholder="Ваше ім'я">
+            <input type="date" placeholder="Дата">
+            <input type="time" placeholder="Час">
+            <button onclick="alert('Столик заброньовано!')">Забронювати</button>
+        </div>
+    </section>
+</body>
+</html>

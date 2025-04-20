@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шаблон Інтернет-магазин</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #f4f4f4;
+            color: #333;
+        }
+        .header {
+            background: #1E3A8A;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .products {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .products h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .product-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-item h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .product-item p {
+            font-size: 16px;
+            color: #1E3A8A;
+            margin-bottom: 10px;
+        }
+        .product-item button {
+            background: #FFA500;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1E3A8A;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Інтернет-магазин</h1>
+        <p>Купуйте найкращі товари онлайн!</p>
+    </header>
+
+    <section class="products">
+        <h2>Наші товари</h2>
+        <div class="products-grid">
+            <div class="product-item">
+                <img src="https://via.placeholder.com/250x200" alt="Товар 1">
+                <h3>Товар 1</h3>
+                <p>500 грн</p>
+                <button>Додати в кошик</button>
+            </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/250x200" alt="Товар 2">
+                <h3>Товар 2</h3>
+                <p>750 грн</p>
+                <button>Додати в кошик</button>
+            </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/250x200" alt="Товар 3">
+                <h3>Товар 3</h3>
+                <p>300 грн</p>
+                <button>Додати в кошик</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Інтернет-магазин</p>
+    </footer>
+</body>
+</html>
