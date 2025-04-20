@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <header>
@@ -21,6 +22,11 @@
                 <li><a href="#templates">Шаблони</a></li>
                 <li><a href="#about">Про нас</a></li>
                 <li><a href="#contact">Контакти</a></li>
+                <li>
+                    <button id="theme-toggle" title="Переключити тему">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -40,74 +46,92 @@
     <section class="templates-section" id="templates">
         <h2>Виберіть найкращий шаблон для вашого сайту!</h2>
         <div class="templates-grid">
-            <div class="template-card">
+            <div class="template-card" data-aos="fade-up" data-aos-delay="100">
                 <img src="images/portfolio-preview.jpg" alt="Портфоліо" class="template-image">
                 <h3>Шаблон "Портфоліо"</h3>
                 <div class="template-buttons">
-                    <a href="templates/template-portfolio.html" class="preview-btn"><i class="fas fa-eye"></i></a>
-                    <a href="templates/template-portfolio.html" class="download-btn" download><i class="fas fa-download"></i></a>
+                    <a href="/images/templates/template-portfolio.html" class="preview-btn"><i class="fas fa-eye"></i></a>
+                    <a href="#" class="download-btn" id="download-portfolio"><i class="fas fa-download"></i></a>
                 </div>
             </div>
-            <div class="template-card">
+            <div class="template-card" data-aos="fade-up" data-aos-delay="200">
                 <img src="images/business-preview.jpg" alt="Бізнес" class="template-image">
                 <h3>Шаблон "Бізнес"</h3>
                 <div class="template-buttons">
-                    <a href="templates/template-business.html" class="preview-btn"><i class="fas fa-eye"></i></a>
-                    <a href="templates/template-business.html" class="download-btn" download><i class="fas fa-download"></i></a>
+                    <a href="/images/templates/template-business.html" class="preview-btn"><i class="fas fa-eye"></i></a>
+                    <a href="#" class="download-btn" id="download-business"><i class="fas fa-download"></i></a>
                 </div>
             </div>
-            <div class="template-card">
+            <div class="template-card" data-aos="fade-up" data-aos-delay="300">
                 <img src="images/blog-preview.jpg" alt="Блог" class="template-image">
                 <h3>Шаблон "Блог"</h3>
                 <div class="template-buttons">
-                    <a href="templates/template-blog.html" class="preview-btn"><i class="fas fa-eye"></i></a>
-                    <a href="templates/template-blog.html" class="download-btn" download><i class="fas fa-download"></i></a>
+                    <a href="/images/templates/template-blog.html" class="preview-btn"><i class="fas fa-eye"></i></a>
+                    <a href="#" class="download-btn" id="download-blog"><i class="fas fa-download"></i></a>
                 </div>
             </div>
-            <div class="template-card">
+            <div class="template-card" data-aos="fade-up" data-aos-delay="400">
                 <img src="images/ecommerce-preview.jpg" alt="Інтернет-магазин" class="template-image">
                 <h3>Шаблон "Інтернет-магазин"</h3>
                 <div class="template-buttons">
-                    <a href="templates/templates/template-ecommerce.html" class="preview-btn"><i class="fas fa-eye"></i></a>
-                    <a href="templates/templates/template-ecommerce.html" class="download-btn" download><i class="fas fa-download"></i></a>
+                    <a href="/images/templates/template-ecommerce.html" class="preview-btn"><i class="fas fa-eye"></i></a>
+                    <a href="#" class="download-btn" id="download-ecommerce"><i class="fas fa-download"></i></a>
                 </div>
             </div>
-            <div class="template-card">
+            <div class="template-card" data-aos="fade-up" data-aos-delay="500">
                 <img src="images/cafe-preview.jpg" alt="Кафе" class="template-image">
                 <h3>Шаблон "Кафе"</h3>
                 <div class="template-buttons">
-                    <a href="templates/template-cafe.html" class="preview-btn"><i class="fas fa-eye"></i></a>
-                    <a href="templates/template-cafe.html" class="download-btn" download><i class="fas fa-download"></i></a>
+                    <a href="/images/templates/template-cafe.html" class="preview-btn"><i class="fas fa-eye"></i></a>
+                    <a href="#" class="download-btn" id="download-cafe"><i class="fas fa-download"></i></a>
                 </div>
             </div>
-            <div class="template-card">
+            <div class="template-card" data-aos="fade-up" data-aos-delay="600">
                 <img src="images/photographer-preview.jpg" alt="Фотограф" class="template-image">
                 <h3>Шаблон "Фотограф"</h3>
                 <div class="template-buttons">
-                    <a href="templates/template-photographer.html" class="preview-btn"><i class="fas fa-eye"></i></a>
-                    <a href="templates/template-photographer.html" class="download-btn" download><i class="fas fa-download"></i></a>
+                    <a href="/images/templates/template-photographer.html" class="preview-btn"><i class="fas fa-eye"></i></a>
+                    <a href="#" class="download-btn" id="download-photographer"><i class="fas fa-download"></i></a>
                 </div>
             </div>
-            <div class="template-card">
+            <div class="template-card" data-aos="fade-up" data-aos-delay="700">
                 <img src="images/news-preview.jpg" alt="Новини" class="template-image">
                 <h3>Шаблон "Новини"</h3>
                 <div class="template-buttons">
-                    <a href="templates/template-news.html" class="preview-btn"><i class="fas fa-eye"></i></a>
-                    <a href="templates/template-news.html" class="download-btn" download><i class="fas fa-download"></i></a>
+                    <a href="/images/templates/template-news.html" class="preview-btn"><i class="fas fa-eye"></i></a>
+                    <a href="#" class="download-btn" id="download-news"><i class="fas fa-download"></i></a>
                 </div>
             </div>
-            <div class="template-card">
+            <div class="template-card" data-aos="fade-up" data-aos-delay="800">
                 <img src="images/personal-preview.jpg" alt="Личный сайт" class="template-image">
                 <h3>Шаблон "Личный сайт"</h3>
                 <div class="template-buttons">
-                    <a href="templates/template-personal.html" class="preview-btn"><i class="fas fa-eye"></i></a>
-                    <a href="templates/template-personal.html" class="download-btn" download><i class="fas fa-download"></i></a>
+                    <a href="/images/templates/template-personal.html" class="preview-btn"><i class="fas fa-eye"></i></a>
+                    <a href="#" class="download-btn" id="download-personal"><i class="fas fa-download"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <section class="about-section" id="about">
+        <h2>Про нас</h2>
+        <div class="about-content">
+            <p>
+                Ми — <strong>TemplateForge</strong>, професійна фронтенд-компанія, яка спеціалізується на створенні сучасних та функціональних вебсайтів. 
+                Наша команда працює під керівництвом Андросова Богдана та Єгора Коробка, які мають багаторічний досвід у веб-розробці. 
+                Ми прагнемо допомогти вам втілити ваші ідеї в життя, пропонуючи якісні шаблони та індивідуальний підхід до кожного проєкту.
+            </p>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Контакти</h2>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:jorobko.egor08@gmail.com">jorobko.egor08@gmail.com</a></p>
+            <p>Email: <a href="mailto:jorobko.egor07@gmail.com">jorobko.egor07@gmail.com</a></p>
+            <p>Телефон: <a href="tel:+380974994591">+380974994591</a></p>
+            <p>Телефон: <a href="tel:+380683544935">+380683544935</a></p>
+        </div>
         <div class="social-links">
             <a href="https://github.com/cureddd" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://discordapp.com/users/460367770975076352" target="_blank"><i class="fab fa-discord"></i></a>
@@ -116,6 +140,7 @@
         <p>© 2025 TemplateForge</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script defer src="script.js"></script>
 </body>
 </html>
