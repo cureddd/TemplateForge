@@ -20,10 +20,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     
+    document.querySelector('a[href="#templates"]').addEventListener('click', function(e) {
+        e.preventDefault();
+        templatesSection.scrollIntoView({ behavior: 'smooth' });
+    });
+    
     document.querySelector('a[href="#about"]').addEventListener('click', function(e) {
         e.preventDefault();
         aboutSection.scrollIntoView({ behavior: 'smooth' });
-    }); 
+    });
 
     
     document.querySelector('a[href="#contact"]').addEventListener('click', function(e) {
