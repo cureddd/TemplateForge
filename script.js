@@ -7,28 +7,32 @@ document.addEventListener('DOMContentLoaded', function() {
     const aboutSection = document.getElementById('about');
     const contactSection = document.getElementById('contact');
     const themeToggle = document.getElementById('theme-toggle');
-    const themeIcon = themeToggle.querySelector('i')
+  
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
 
-    
+if (!themeToggle || !themeIcon) {
+    console.error('Theme toggle button or icon not found');
+    return;
+}
+console.log('Theme toggle button found');
 
+AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+});
 
-    AOS.init({
-        duration: 800, 
-        once: true, 
-        offset: 100 
-    });
-
-    
-    document.querySelector('a[href="#templates"]').addEventListener('click', function(e) {
-        e.preventDefault();
-        templatesSection.scrollIntoView({ behavior: 'smooth' });
-    });
+toTemplatesBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    templatesSection.scrollIntoView({ behavior: 'smooth' });
+});
 
     
     document.querySelector('a[href="#about"]').addEventListener('click', function(e) {
         e.preventDefault();
         aboutSection.scrollIntoView({ behavior: 'smooth' });
-    });
+    }); 
 
     
     document.querySelector('a[href="#contact"]').addEventListener('click', function(e) {
