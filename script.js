@@ -8,18 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactSection = document.getElementById('contact');
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
-
-    
-
-
     // AOS
     AOS.init({
         duration: 800, 
         once: true, 
         offset: 100 
     });
-
-    
     toTemplatesBtn.addEventListener('click', function(e) {
         e.preventDefault();
         templatesSection.scrollIntoView({ behavior: 'smooth' });
@@ -29,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('a[href="#about"]').addEventListener('click', function(e) {
         e.preventDefault();
         aboutSection.scrollIntoView({ behavior: 'smooth' });
-    });
+    }); 
 
     
     document.querySelector('a[href="#contact"]').addEventListener('click', function(e) {
