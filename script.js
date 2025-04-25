@@ -2,22 +2,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const searchInput = document.querySelector('.input-search');
     const templateCards = document.querySelectorAll('.template-card');
-    const toTemplatesBtn = document.getElementById('to-templates-btn');
     const templatesSection = document.getElementById('templates');
     const aboutSection = document.getElementById('about');
     const contactSection = document.getElementById('contact');
     const themeToggle = document.getElementById('theme-toggle');
-    const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
-    // AOS
-    AOS.init({
-        duration: 800, 
-        once: true, 
-        offset: 100 
-    });
-    toTemplatesBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        templatesSection.scrollIntoView({ behavior: 'smooth' });
-    });
+  
+
+const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
+
+if (!themeToggle || !themeIcon) {
+    console.error('Theme toggle button or icon not found');
+    return;
+}
+console.log('Theme toggle button found');
+
+AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+});
+
+toTemplatesBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    templatesSection.scrollIntoView({ behavior: 'smooth' });
+});
 
     
     document.querySelector('a[href="#templates"]').addEventListener('click', function(e) {
@@ -65,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.URL.revokeObjectURL(url);
                 document.body.removeChild(a);
             })
-            .catch(err => console.error('Ошибка при скачивании:', err));
+            .catch(err => console.error('Помилка під час завантаження:', err));
     }
 
     document.getElementById('download-portfolio').addEventListener('click', function(e) {
