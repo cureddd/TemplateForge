@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const searchInput = document.querySelector('.input-search');
     const templateCards = document.querySelectorAll('.template-card');
+    
     const templatesSection = document.getElementById('templates');
     const aboutSection = document.getElementById('about');
     const contactSection = document.getElementById('contact');
