@@ -2,18 +2,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const searchInput = document.querySelector('.input-search');
     const templateCards = document.querySelectorAll('.template-card');
-    const toTemplatesBtn = document.getElementById('to-templates-btn');
 
     const templatesSection = document.getElementById('templates');
     const aboutSection = document.getElementById('about');
     const contactSection = document.getElementById('contact');
     const themeToggle = document.getElementById('theme-toggle');
-    const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
+    const themeIcon = themeToggle.querySelector('i')
 
     
 
 
-    // AOS
     AOS.init({
         duration: 800, 
         once: true, 
@@ -21,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     
-    toTemplatesBtn.addEventListener('click', function(e) {
+    document.querySelector('a[href="#templates"]').addEventListener('click', function(e) {
         e.preventDefault();
         templatesSection.scrollIntoView({ behavior: 'smooth' });
     });
@@ -67,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.URL.revokeObjectURL(url);
                 document.body.removeChild(a);
             })
-            .catch(err => console.error('Ошибка при скачивании:', err));
+            .catch(err => console.error('Помилка під час завантаження:', err));
     }
 
     document.getElementById('download-portfolio').addEventListener('click', function(e) {
