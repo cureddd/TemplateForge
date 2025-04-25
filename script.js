@@ -2,33 +2,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const searchInput = document.querySelector('.input-search');
     const templateCards = document.querySelectorAll('.template-card');
-    
+
     const templatesSection = document.getElementById('templates');
     const aboutSection = document.getElementById('about');
     const contactSection = document.getElementById('contact');
     const themeToggle = document.getElementById('theme-toggle');
-  
-
-const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
-
-if (!themeToggle || !themeIcon) {
-    console.error('Theme toggle button or icon not found');
-    return;
-}
-console.log('Theme toggle button found');
-
-AOS.init({
-    duration: 800,
-    once: true,
-    offset: 100
-});
-
-toTemplatesBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    templatesSection.scrollIntoView({ behavior: 'smooth' });
-});
+    const themeIcon = themeToggle.querySelector('i')
 
     
+
+
+    AOS.init({
+        duration: 800, 
+        once: true, 
+        offset: 100 
+    });
+
+    
+
     document.querySelector('a[href="#templates"]').addEventListener('click', function(e) {
         e.preventDefault();
         templatesSection.scrollIntoView({ behavior: 'smooth' });
@@ -116,8 +107,6 @@ toTemplatesBtn.addEventListener('click', function(e) {
         e.preventDefault();
         downloadFile('/images/templates/template-personal.html', 'template-personal.html');
     });
-
-   
     const savedTheme = localStorage.getItem('theme') || 'dark';
     console.log('Saved theme:', savedTheme); 
     if (savedTheme === 'light') {
